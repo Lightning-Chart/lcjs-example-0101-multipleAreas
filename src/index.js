@@ -21,9 +21,9 @@ const {
 } = lcjs
 
 // ----- Cache styles -----
-const palette = ColorPalettes.arctionWarm(2)
-const solidFills = [0, 1].map(palette).map(color => new SolidFill({ color }))
-const opaqueFills = solidFills.map(fill => fill.setA(100))
+const palette = ColorPalettes.fullSpectrum(10)
+const solidFills = [3, 0].map(palette).map(color => new SolidFill({ color }))
+const opaqueFills = solidFills.map(fill => fill.setA(150))
 
 // Create a XY Chart.
 const xyChart = lightningChart().ChartXY()
