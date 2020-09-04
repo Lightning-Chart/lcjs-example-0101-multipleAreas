@@ -17,7 +17,8 @@ const {
     UIOrigins,
     UIElementBuilders,
     LegendBoxBuilders,
-    UIButtonPictures
+    UIButtonPictures,
+    Themes
 } = lcjs
 
 // ----- Cache styles -----
@@ -26,7 +27,9 @@ const solidFills = [3, 0].map(palette).map(color => new SolidFill({ color }))
 const opaqueFills = solidFills.map(fill => fill.setA(150))
 
 // Create a XY Chart.
-const xyChart = lightningChart().ChartXY()
+const xyChart = lightningChart().ChartXY({
+    // theme: Themes.dark 
+})
     .setTitle('Expected Profits To Expenses')
     .setPadding({ right: 2 })
 

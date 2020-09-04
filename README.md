@@ -64,12 +64,12 @@ series.add([
 
 ## API Links
 
-* XY cartesian chart: [ChartXY]
-* Area series: [AreaSeries]
-* Area type: [AreaSeriesTypes]
-* Positive Area series: [AreaSeriesPositive]
-* Negative Area series: [AreaSeriesNegative]
-* Color palettes: [ColorPalettes]
+* [XY cartesian chart]
+* [Area series]
+* [Area type]
+* [Positive Area series]
+* [Negative Area series]
+* [Color palettes]
 
 
 ## Support
@@ -93,10 +93,10 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html
-[AreaSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html#addareaseries
-[AreaSeriesTypes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#areaseriestypes
-[AreaSeriesPositive]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/areaseriespositive.html
-[AreaSeriesNegative]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/areaseriesnegative.html
-[ColorPalettes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#colorpalettes
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html
+[Area series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html#addareaseries
+[Area type]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#areaseriestypes
+[Positive Area series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/areaseriespositive.html
+[Negative Area series]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/areaseriesnegative.html
+[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#colorpalettes
 
