@@ -35,8 +35,6 @@ const xyChart = lightningChart().ChartXY({
 
 // Create a LegendBox as part of the chart.
 const legend = xyChart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
-    .setPosition({ x: 5, y: 95 })
-    .setOrigin(UIOrigins.LeftTop)
 
 // ---- Add multiple Area series with different baselines and direction. ----
 // Create semi-transparent red area to draw points above the baseline.
@@ -170,14 +168,14 @@ expensesData.forEach((point) => { areaExpense.add(point) })
 
 // Set the custom result table for both areaSeries
 areaProfit
-    .setResultTableFormatter((builder, series, position, highValue, lowValue) => {
+    .setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
         return builder
             .addRow('Profits')
             .addRow('Amount: $' + highValue.toFixed(0))
             .addRow('Units Produced: ' + position.toFixed(0))
     })
 areaExpense
-    .setResultTableFormatter((builder, series, position, highValue, lowValue) => {
+    .setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
         return builder
             .addRow('Expenses')
             .addRow('Amount: $' + highValue.toFixed(0) * -1)
