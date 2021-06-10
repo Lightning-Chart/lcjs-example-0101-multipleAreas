@@ -1,6 +1,6 @@
-# Multiple Areas
+# JavaScript Multiple Areas Chart
 
-![Multiple Areas](multipleAreas.png)
+![JavaScript Multiple Areas Chart](multipleAreas.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
