@@ -12,41 +12,32 @@ const lcjs = require('@arction/lcjs')
 const {
     lightningChart,
     AreaSeriesTypes,
-    ColorPalettes,
-    SolidFill,
-    UIOrigins,
     UIElementBuilders,
     LegendBoxBuilders,
     UIButtonPictures,
     Themes
 } = lcjs
 
-// ----- Cache styles -----
-const palette = ColorPalettes.fullSpectrum(10)
-const solidFills = [3, 0].map(palette).map(color => new SolidFill({ color }))
-const opaqueFills = solidFills.map(fill => fill.setA(150))
-
 // Create a XY Chart.
 const xyChart = lightningChart().ChartXY({
-    // theme: Themes.dark 
+    // theme: Themes.darkGold 
 })
     .setTitle('Expected Profits To Expenses')
     .setPadding({ right: 2 })
 
 // Create a LegendBox as part of the chart.
 const legend = xyChart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
+    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
+    .setAutoDispose({
+        type: 'max-width',
+        maxWidth: 0.80,
+    })
 
 // ---- Add multiple Area series with different baselines and direction. ----
-// Create semi-transparent red area to draw points above the baseline.
 const areaProfit = xyChart.addAreaSeries({ type: AreaSeriesTypes.Positive })
-    .setFillStyle(opaqueFills[0])
-    .setStrokeStyle(stroke => stroke.setFillStyle(solidFills[0]))
     .setName('Profits')
 
-// Create semi-transparent orange area to draw points below the baseline.
 const areaExpense = xyChart.addAreaSeries({ type: AreaSeriesTypes.Negative })
-    .setFillStyle(opaqueFills[1])
-    .setStrokeStyle(stroke => stroke.setFillStyle(solidFills[1]))
     .setName('Expenses')
 
 // Set Axis nicely
