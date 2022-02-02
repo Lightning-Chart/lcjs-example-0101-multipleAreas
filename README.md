@@ -93,10 +93,10 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/chartxy.html
-[Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/chartxy.html#addareaseries
-[Area type]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#areaseriestypes
-[Positive Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/areaseriespositive.html
-[Negative Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/classes/areaseriesnegative.html
-[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v3.3.0/globals.html#colorpalettes
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/chartxy.html
+[Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/chartxy.html#addareaseries
+[Area type]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#areaseriestypes
+[Positive Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/areaseriespositive.html
+[Negative Area series]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/classes/areaseriesnegative.html
+[Color palettes]: https://www.arction.com/lightningchart-js-api-documentation/v3.4.0/globals.html#colorpalettes
 
