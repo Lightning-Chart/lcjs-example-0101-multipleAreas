@@ -1,50 +1,41 @@
 /*
  * LightningChart® example code: Demo shows how to draw multiple layered area series.
- * If you need any assistance, or notice error in this example code, please contact support@arction.com. 
- * 
- * http://www.arction.com | support@arction.com | sales@arction.com
- * © Arction Ltd 2009-2019. All rights reserved.  
+ * If you need any assistance, or notice error in this example code, please contact support@lightningchart.com.
+ *
+ * http://lightningchart.com | support@lightningchart.com | sales@lightningchart.com
+ * © LightningChart Ltd 2009-2019. All rights reserved.
  */
 // Import LightningChartJS
 const lcjs = require('@arction/lcjs')
 
 // Extract required parts from LightningChartJS.
-const {
-    lightningChart,
-    AreaSeriesTypes,
-    UIElementBuilders,
-    LegendBoxBuilders,
-    UIButtonPictures,
-    Themes
-} = lcjs
+const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, UIButtonPictures, Themes } = lcjs
 
 // Create a XY Chart.
-const xyChart = lightningChart().ChartXY({
-    // theme: Themes.darkGold 
-})
+const xyChart = lightningChart()
+    .ChartXY({
+        // theme: Themes.darkGold
+    })
     .setTitle('Expected Profits To Expenses')
     .setPadding({ right: 2 })
 
 // Create a LegendBox as part of the chart.
-const legend = xyChart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
+const legend = xyChart
+    .addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
     // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
     .setAutoDispose({
         type: 'max-width',
-        maxWidth: 0.80,
+        maxWidth: 0.8,
     })
 
 // ---- Add multiple Area series with different baselines and direction. ----
-const areaProfit = xyChart.addAreaSeries({ type: AreaSeriesTypes.Positive })
-    .setName('Profits')
+const areaProfit = xyChart.addAreaSeries({ type: AreaSeriesTypes.Positive }).setName('Profits')
 
-const areaExpense = xyChart.addAreaSeries({ type: AreaSeriesTypes.Negative })
-    .setName('Expenses')
+const areaExpense = xyChart.addAreaSeries({ type: AreaSeriesTypes.Negative }).setName('Expenses')
 
 // Set Axis nicely
-xyChart.getDefaultAxisX()
-    .setTitle('Units Produced')
-xyChart.getDefaultAxisY()
-    .setTitle('USD')
+xyChart.getDefaultAxisX().setTitle('Units Produced')
+xyChart.getDefaultAxisY().setTitle('USD')
 
 const profitData = [
     { x: 0, y: 0 },
@@ -97,7 +88,7 @@ const profitData = [
     { x: 470, y: 673 },
     { x: 480, y: 695 },
     { x: 490, y: 702 },
-    { x: 500, y: 710 }
+    { x: 500, y: 710 },
 ]
 const expensesData = [
     { x: 0, y: 0 },
@@ -150,43 +141,41 @@ const expensesData = [
     { x: 470, y: -647 },
     { x: 480, y: -648 },
     { x: 490, y: -659 },
-    { x: 500, y: -665 }
+    { x: 500, y: -665 },
 ]
 
 // ---- Generate points using 'xydata'-library and add it to every plot. ----
-profitData.forEach((point) => { areaProfit.add(point) })
-expensesData.forEach((point) => { areaExpense.add(point) })
+profitData.forEach((point) => {
+    areaProfit.add(point)
+})
+expensesData.forEach((point) => {
+    areaExpense.add(point)
+})
 
 // Set the custom result table for both areaSeries
-areaProfit
-    .setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
-        return builder
-            .addRow('Profits')
-            .addRow('Amount: $' + highValue.toFixed(0))
-            .addRow('Units Produced: ' + position.toFixed(0))
-    })
-areaExpense
-    .setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
-        return builder
-            .addRow('Expenses')
-            .addRow('Amount: $' + highValue.toFixed(0) * -1)
-            .addRow('Units Produced: ' + position.toFixed(0))
-    })
+areaProfit.setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
+    return builder
+        .addRow('Profits')
+        .addRow('Amount: $' + highValue.toFixed(0))
+        .addRow('Units Produced: ' + position.toFixed(0))
+})
+areaExpense.setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
+    return builder
+        .addRow('Expenses')
+        .addRow('Amount: $' + highValue.toFixed(0) * -1)
+        .addRow('Units Produced: ' + position.toFixed(0))
+})
 
 // Add series to LegendBox and style entries.
 legend.add(
     areaProfit,
     true,
     'Expected Profits To Expenses',
-    UIElementBuilders.CheckBox
-        .setPictureOff(UIButtonPictures.Circle)
-        .setPictureOn(UIButtonPictures.Circle)
+    UIElementBuilders.CheckBox.setPictureOff(UIButtonPictures.Circle).setPictureOn(UIButtonPictures.Circle),
 )
 legend.add(
     areaExpense,
     true,
     'Expected Profits To Expenses',
-    UIElementBuilders.CheckBox
-        .setPictureOff(UIButtonPictures.Circle)
-        .setPictureOn(UIButtonPictures.Circle)
+    UIElementBuilders.CheckBox.setPictureOff(UIButtonPictures.Circle).setPictureOn(UIButtonPictures.Circle),
 )
