@@ -99,10 +99,10 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/ChartXY.html
-[Area series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/ChartXY.html#addAreaSeries
-[Area type]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/AreaSeriesTypes.html
-[Positive Area series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/AreaSeriesPositive.html
-[Negative Area series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/AreaSeriesNegative.html
-[Color palettes]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/ColorPalettes.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/ChartXY.html
+[Area series]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/ChartXY.html#addAreaSeries
+[Area type]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/AreaSeriesTypes.html
+[Positive Area series]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/AreaSeriesPositive.html
+[Negative Area series]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/classes/AreaSeriesNegative.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v4.2.0/variables/ColorPalettes.html
 
