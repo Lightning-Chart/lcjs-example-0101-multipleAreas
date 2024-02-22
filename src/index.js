@@ -1,6 +1,5 @@
 /*
  * LightningChart® example code: Demo shows how to draw multiple layered area series.
- * If you need any assistance, or notice error in this example code, please contact support@lightningchart.com.
  *
  * http://lightningchart.com | support@lightningchart.com | sales@lightningchart.com
  * © LightningChart Ltd 2009-2019. All rights reserved.
@@ -9,7 +8,7 @@
 const lcjs = require('@arction/lcjs')
 
 // Extract required parts from LightningChartJS.
-const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, UIButtonPictures, Themes } = lcjs
+const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, PointShape, Themes } = lcjs
 
 // Create a XY Chart.
 const xyChart = lightningChart()
@@ -167,15 +166,5 @@ areaExpense.setCursorResultTableFormatter((builder, series, position, highValue,
 })
 
 // Add series to LegendBox and style entries.
-legend.add(
-    areaProfit,
-    true,
-    'Expected Profits To Expenses',
-    UIElementBuilders.CheckBox.setPictureOff(UIButtonPictures.Circle).setPictureOn(UIButtonPictures.Circle),
-)
-legend.add(
-    areaExpense,
-    true,
-    'Expected Profits To Expenses',
-    UIElementBuilders.CheckBox.setPictureOff(UIButtonPictures.Circle).setPictureOn(UIButtonPictures.Circle),
-)
+legend.add(areaProfit, true, 'Expected Profits To Expenses', UIElementBuilders.CheckBox.setButtonShape(PointShape.Circle))
+legend.add(areaExpense, true, 'Expected Profits To Expenses', UIElementBuilders.CheckBox.setButtonShape(PointShape.Circle))
