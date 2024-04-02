@@ -13,7 +13,7 @@ const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, P
 // Create a XY Chart.
 const xyChart = lightningChart()
     .ChartXY({
-        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined
+        theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Expected Profits To Expenses')
     .setPadding({ right: 2 })
