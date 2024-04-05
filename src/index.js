@@ -11,7 +11,9 @@ const lcjs = require('@arction/lcjs')
 const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, PointShape, Themes } = lcjs
 
 // Create a XY Chart.
-const xyChart = lightningChart()
+const xyChart = lightningChart({
+            resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
+        })
     .ChartXY({
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
