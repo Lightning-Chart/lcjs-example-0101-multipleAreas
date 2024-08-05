@@ -5,7 +5,7 @@
  * © LightningChart Ltd 2009-2019. All rights reserved.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Extract required parts from LightningChartJS.
 const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, PointShape, Themes } = lcjs
@@ -151,20 +151,6 @@ profitData.forEach((point) => {
 })
 expensesData.forEach((point) => {
     areaExpense.add(point)
-})
-
-// Set the custom result table for both areaSeries
-areaProfit.setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
-    return builder
-        .addRow('Profits')
-        .addRow('Amount: $' + highValue.toFixed(0))
-        .addRow('Units Produced: ' + position.toFixed(0))
-})
-areaExpense.setCursorResultTableFormatter((builder, series, position, highValue, lowValue) => {
-    return builder
-        .addRow('Expenses')
-        .addRow('Amount: $' + highValue.toFixed(0) * -1)
-        .addRow('Units Produced: ' + position.toFixed(0))
 })
 
 // Add series to LegendBox and style entries.
