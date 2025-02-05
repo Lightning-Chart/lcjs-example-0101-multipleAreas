@@ -18,7 +18,6 @@ const xyChart = lightningChart({
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Expected Profits To Expenses')
-    .setPadding({ right: 2 })
 
 // Create a LegendBox as part of the chart.
 const legend = xyChart
