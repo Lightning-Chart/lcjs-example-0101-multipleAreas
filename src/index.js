@@ -8,7 +8,7 @@
 const lcjs = require('@lightningchart/lcjs')
 
 // Extract required parts from LightningChartJS.
-const { lightningChart, AreaSeriesTypes, UIElementBuilders, LegendBoxBuilders, PointShape, Themes } = lcjs
+const { lightningChart, AreaSeriesTypes, UIElementBuilders, PointShape, Themes } = lcjs
 
 // Create a XY Chart.
 const xyChart = lightningChart({
@@ -18,15 +18,6 @@ const xyChart = lightningChart({
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('Expected Profits To Expenses')
-
-// Create a LegendBox as part of the chart.
-const legend = xyChart
-    .addLegendBox(LegendBoxBuilders.HorizontalLegendBox)
-    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-    .setAutoDispose({
-        type: 'max-width',
-        maxWidth: 0.8,
-    })
 
 // ---- Add multiple Area series with different baselines and direction. ----
 const areaProfit = xyChart.addAreaSeries({ type: AreaSeriesTypes.Positive }).setName('Profits')
@@ -146,12 +137,8 @@ const expensesData = [
 
 // ---- Generate points using 'xydata'-library and add it to every plot. ----
 profitData.forEach((point) => {
-    areaProfit.add(point)
+    areaProfit.appendSample(point)
 })
 expensesData.forEach((point) => {
-    areaExpense.add(point)
+    areaExpense.appendSample(point)
 })
-
-// Add series to LegendBox and style entries.
-legend.add(areaProfit, true, 'Expected Profits To Expenses', UIElementBuilders.CheckBox.setButtonShape(PointShape.Circle))
-legend.add(areaExpense, true, 'Expected Profits To Expenses', UIElementBuilders.CheckBox.setButtonShape(PointShape.Circle))
