@@ -96,13 +96,13 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 [3]: https://stackoverflow.com/questions/tagged/lightningchart
 [4]: https://lightningchart.com/support-services/
 
-© LightningChart Ltd 2009-2022. All rights reserved.
+© LightningChart Ltd 2009-2025. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/ChartXY.html
-[Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/ChartXY.html#addAreaSeries
-[Area type]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/AreaSeriesTypes.html
-[Positive Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/AreaSeriesPositive.html
-[Negative Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/classes/AreaSeriesNegative.html
-[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.0.0/variables/ColorPalettes.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/ChartXY.html
+[Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/ChartXY.html#addAreaSeries
+[Area type]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/AreaSeriesTypes.html
+[Positive Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/AreaSeriesPositive.html
+[Negative Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/AreaSeriesNegative.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/ColorPalettes.html
 
