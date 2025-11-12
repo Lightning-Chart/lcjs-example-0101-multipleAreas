@@ -72,7 +72,6 @@ series.add([
 
 * [XY cartesian chart]
 * [Area series]
-* [Area type]
 * [Positive Area series]
 * [Negative Area series]
 * [Color palettes]
@@ -99,10 +98,9 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2025. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/ChartXY.html
-[Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/ChartXY.html#addAreaSeries
-[Area type]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/AreaSeriesTypes.html
-[Positive Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/AreaSeriesPositive.html
-[Negative Area series]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/classes/AreaSeriesNegative.html
-[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.0.1/variables/ColorPalettes.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/ChartXY.html
+[Area series]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/ChartXY.html#addAreaSeries
+[Positive Area series]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/PointLineAreaSeries.html
+[Negative Area series]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/classes/PointLineAreaSeries.html
+[Color palettes]: https://lightningchart.com/js-charts/api-documentation/v8.1.0/variables/ColorPalettes.html
 
